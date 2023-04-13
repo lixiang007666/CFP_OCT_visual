@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import cv2
 
-img = cv2.imread('/Users/lixiang/PycharmProjects/fg12/1.png')
+img = cv2.imread('./od_oc/predicted_img.png')
 edge = cv2.Canny(img, 100, 200)
 
 ans = []
@@ -29,7 +29,7 @@ import cv2
 import numpy as np
 
 # 通过OpenCV读取图片信息
-img = cv2.imread('/Users/lixiang/PycharmProjects/fg12/yuantu/611636167186_.pic_hd.jpg')
+img = cv2.imread('./od_oc/origin_img.png')
 
 # 将制定像素点的数据设置为0, 要注意的是这三个参数对应的值是Blue, Green, Red。
 #34,139,34
@@ -39,4 +39,4 @@ img[y-1, x+1] = [255, 0, 0]
 img[y+1, x-1] = [255, 0, 0]
 img[y+1, x+1] = [255, 0, 0]
 # 将图像进行输出，使用show()也是可以显示的。
-cv2.imwrite('6-4.png', img)
+cv2.imwrite('vis_odoc.png', img)
